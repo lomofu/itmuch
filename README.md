@@ -7,6 +7,8 @@
 
 - [知识点](#知识点:)
 
+
+
 ### QuickStart
 
 #### 	1.前往nacos官网下载nacos （本人1.0.3）
@@ -28,8 +30,19 @@
 
 
 <hr>
-
 ### 版本：
+
+###### **2019.10.16
+
+> 版本：**1.0.2**
+>
+> 作者：**lomo fu**
+>
+> 内容：整合Fegin 取代Rest Template
+>
+> ​			整合Sentinel和Sentinel Dashboard
+
+
 
 
 ###### **2019.10.15**
@@ -59,7 +72,9 @@
 
 
 <hr>
-### 														Category
+
+### 																												Category
+
 
 ### 知识点:
 
@@ -77,21 +92,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Feign常见问题](http://www.imooc.com/article/289005)
 
 
 

@@ -4,6 +4,7 @@ import com.lomofu.contentcenter.dao.content.ShareMapper;
 import com.lomofu.contentcenter.dto.content.ShareDTO;
 import com.lomofu.contentcenter.dto.user.UserDTO;
 import com.lomofu.contentcenter.entity.content.Share;
+import com.lomofu.contentcenter.httpclient.UserCenterFeignClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -31,6 +32,9 @@ public class ShareService {
   private final String USER_CENTER = "user-center";
   private final String RIBBON_USER_URL = "http://user-center/users/{id}";
 
+  /** ？这里使用@Resource会装配失败 只有@AutoWire可以 */
+  @Autowired private UserCenterFeignClient userCenterFeignClient;
+
   @Resource private DiscoveryClient discoveryClient;
 
   public ShareDTO findById(Integer id) {
@@ -38,9 +42,13 @@ public class ShareService {
     Integer userId = share.getUserId();
 
     /** Ribbon会自动负载均衡"user-center" 并将user-center 填充为对应的url地址 */
-    ResponseEntity<UserDTO> responseEntity =
-        restTemplate.getForEntity(RIBBON_USER_URL, UserDTO.class, userId);
-    UserDTO userDTO = responseEntity.getBody();
+    //    @Deprecated
+    //    ResponseEntity<UserDTO> responseEntity =
+    //        restTemplate.getForEntity(RIBBON_USER_URL, UserDTO.class, userId);
+    //    UserDTO userDTO = responseEntity.getBody();
+
+    // 使用新的FeignClient使得restTemplate更好管理与维护并且易读
+    UserDTO userDTO = userCenterFeignClient.findUserById(id);
     ShareDTO shareDTO = new ShareDTO();
     BeanUtils.copyProperties(userDTO, shareDTO);
     shareDTO.setWxNickname(userDTO.getWxNickname());

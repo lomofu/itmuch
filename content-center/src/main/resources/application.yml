@@ -10,6 +10,12 @@ spring:
       discovery:
         #指定nacos server的地址
         server-addr: localhost:8848
+        #cluster-name: NewYork
+        metadata:
+          version: 1.0
+    sentinel:
+      transport:
+        dashboard: localhost:8080
   application:
     name: content-center
 
@@ -24,4 +30,24 @@ ribbon:
 user-center:
   ribbon:
     NFLoadBalancerRuleClassName: com.lomofu.contentcenter.configuration.NacosWeihtedRule
-
+logging:
+  level:
+    com.lomofu.contentcenter.httpclient.UserCenterFeignClient: debug
+#feign配置
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: full
+  #开启apache httpclinet 而不是默认的urlconnection
+  httpclient:
+    enabled: true
+    #最大连接数量
+    max-connections: 200
+    #单个路径的最大连接数
+    max-connections-per-route: 50
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

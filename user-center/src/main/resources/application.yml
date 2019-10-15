@@ -13,7 +13,7 @@ spring:
         #指定命名空间
         #namespace: 172f034e-cf81-4158-b84a-5a7613ee4fac
         #集群
-        #cluster-name: London
+        #cluster-name: NewYork
         #元数据
         metadata:
           version: 1.0
@@ -22,4 +22,4 @@ spring:
 
 
 server:
-  port: 8083
+  port: 8085

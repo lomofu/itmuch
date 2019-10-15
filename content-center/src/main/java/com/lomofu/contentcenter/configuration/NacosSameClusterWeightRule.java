@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Slf4j
-/** 基于统一集群下的负载均衡 */
+/** 基于统一集群下的负载均衡 加入控制版本 */
 public class NacosSameClusterWeightRule extends AbstractLoadBalancerRule {
   @Resource private NacosDiscoveryProperties nacosDiscoveryProperties;
 

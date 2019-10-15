@@ -1,0 +1,22 @@
+2019-10-16 00:20:05,765 INFO DEFAULT_GROUP@@user-center {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [10.11.22.20:8085:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-16 00:20:05,766 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@user-center, ips: 
+
+2019-10-16 00:27:11,894 INFO DEFAULT_GROUP@@content-center {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.43.54:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-16 00:27:11,894 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@content-center, ips: 192.168.43.54:8081_true,
+
+2019-10-16 00:48:34,523 INFO DEFAULT_GROUP@@content-center {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.43.54:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-16 00:48:34,523 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@content-center, ips: 
+
+2019-10-16 00:48:41,311 INFO DEFAULT_GROUP@@content-center {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.43.54:8081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-16 00:48:41,311 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@content-center, ips: 192.168.43.54:8081_true,
+
+2019-10-16 00:50:38,608 INFO DEFAULT_GROUP@@user-center {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.43.54:8085:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2019-10-16 00:50:38,608 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@user-center, ips: 192.168.43.54:8085_true,
+
+2019-10-16 00:50:38,611 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@user-center, ips: 192.168.43.54:8085_true,
+

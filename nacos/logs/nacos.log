@@ -1,0 +1,50 @@
+2019-10-16 00:07:13,011 INFO [capacityManagement] start correct usage
+
+2019-10-16 00:07:13,013 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-10-16 00:07:13,144 WARN clearConfigHistory start
+
+2019-10-16 00:17:12,981 INFO [capacityManagement] start correct usage
+
+2019-10-16 00:17:12,984 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-10-16 00:17:13,115 WARN clearConfigHistory start
+
+2019-10-16 00:27:12,988 INFO [capacityManagement] start correct usage
+
+2019-10-16 00:27:12,992 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-10-16 00:27:13,119 WARN clearConfigHistory start
+
+2019-10-16 00:37:12,989 INFO [capacityManagement] start correct usage
+
+2019-10-16 00:37:12,991 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-10-16 00:37:13,119 WARN clearConfigHistory start
+
+2019-10-16 00:45:12,390 INFO Expired JWT token.
+
+2019-10-16 00:45:12,390 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+
+2019-10-16 00:47:13,009 INFO [capacityManagement] start correct usage
+
+2019-10-16 00:47:13,010 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-10-16 00:47:13,141 WARN clearConfigHistory start
+
+2019-10-16 00:57:13,028 INFO [capacityManagement] start correct usage
+
+2019-10-16 00:57:13,030 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-10-16 00:57:13,168 WARN clearConfigHistory start
+
+2019-10-16 01:07:13,022 INFO [capacityManagement] start correct usage
+
+2019-10-16 01:07:13,023 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-10-16 01:07:13,154 WARN clearConfigHistory start
+
+2019-10-16 01:07:17,450 INFO Shutting down ExecutorService 'taskScheduler'
+
+2019-10-16 01:07:17,453 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+

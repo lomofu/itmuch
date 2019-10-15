@@ -2,6 +2,8 @@ package com.lomofu.contentcenter;
 
 import com.lomofu.contentcenter.dao.content.ShareMapper;
 import com.lomofu.contentcenter.entity.content.Share;
+import com.lomofu.contentcenter.httpclient.TestBaiduFeignClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +17,8 @@ import java.util.List;
 public class TestController {
 
   @Resource private ShareMapper shareMapper;
+
+  @Autowired private TestBaiduFeignClient testBaiduFeignClient;
 
   /** springCloud 提供的接口提供查询 */
   @Resource private DiscoveryClient discoveryClient;
@@ -54,6 +58,12 @@ public class TestController {
    */
   @GetMapping("/test2")
   public List<ServiceInstance> getInstance() {
+
     return discoveryClient.getInstances("user-center");
+  }
+
+  @GetMapping("/baidu")
+  public String baidIndex() {
+    return testBaiduFeignClient.index();
   }
 }
