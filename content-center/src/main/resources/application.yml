@@ -30,15 +30,22 @@ ribbon:
 user-center:
   ribbon:
     NFLoadBalancerRuleClassName: com.lomofu.contentcenter.configuration.NacosWeihtedRule
-logging:
-  level:
-    com.lomofu.contentcenter.httpclient.UserCenterFeignClient: debug
-#feign配置
+
+# feign
 feign:
+  # 整合feign和sentinel
+  sentinel:
+    enable: true
   client:
     config:
       default:
-        loggerLevel: full
+        loggerLevel: basic
+
+#    logger spring boot
+logging:
+  level:
+    com.lomofu.contentcenter.httpclient.UserCenterFeignClient: debug
+
   #开启apache httpclinet 而不是默认的urlconnection
   httpclient:
     enabled: true
@@ -51,3 +58,4 @@ management:
     web:
       exposure:
         include: '*'
+

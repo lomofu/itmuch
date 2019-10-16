@@ -1,6 +1,7 @@
 package com.lomofu.contentcenter.service.content;
 
 import com.lomofu.contentcenter.dao.content.ShareMapper;
+import com.lomofu.contentcenter.dto.content.ShareAuditDTO;
 import com.lomofu.contentcenter.dto.content.ShareDTO;
 import com.lomofu.contentcenter.dto.user.UserDTO;
 import com.lomofu.contentcenter.entity.content.Share;
@@ -18,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
@@ -31,6 +33,7 @@ public class ShareService {
   private final RestTemplate restTemplate;
   private final String USER_CENTER = "user-center";
   private final String RIBBON_USER_URL = "http://user-center/users/{id}";
+  private final String NOT_YET = "NOT_YET";
 
   /** ？这里使用@Resource会装配失败 只有@AutoWire可以 */
   @Autowired private UserCenterFeignClient userCenterFeignClient;
@@ -84,5 +87,23 @@ public class ShareService {
     BeanUtils.copyProperties(share, shareDTO);
     shareDTO.setWxNickname(userDTO.getWxNickname());
     return shareDTO;
+  }
+
+  public Share auditById(Integer id, ShareAuditDTO shareAuditDTO) {
+
+    // 查询share是否存在
+    Share share = shareMapper.selectByPrimaryKey(id);
+    if (share == null) {
+      throw new IllegalArgumentException("参数非法！该分享不存在！");
+    }
+    if (!Objects.equals(NOT_YET, share.getAuditStatus())) {
+      throw new IllegalArgumentException("参数非法！该分享已经已经审核通过！");
+    }
+    // 审核资源
+    share.setAuditStatus(shareAuditDTO.getAuditStatusEnum().toString());
+    shareMapper.updateByPrimaryKey(share);
+
+    // 异步：pass 为发布人添加积分
+    // userCenterFeignClient.addBonus(id, 500);
   }
 }

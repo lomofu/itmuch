@@ -1,50 +1,58 @@
-2019-10-16 00:07:13,011 INFO [capacityManagement] start correct usage
+2019-10-17 00:02:06,349 INFO [capacityManagement] start correct usage
 
-2019-10-16 00:07:13,013 INFO [capacityManagement] end correct usage, cost: 0s
+2019-10-17 00:02:06,351 INFO [capacityManagement] end correct usage, cost: 0s
 
-2019-10-16 00:07:13,144 WARN clearConfigHistory start
+2019-10-17 00:02:06,491 WARN clearConfigHistory start
 
-2019-10-16 00:17:12,981 INFO [capacityManagement] start correct usage
+2019-10-17 00:12:06,338 INFO [capacityManagement] start correct usage
 
-2019-10-16 00:17:12,984 INFO [capacityManagement] end correct usage, cost: 0s
+2019-10-17 00:12:06,340 INFO [capacityManagement] end correct usage, cost: 0s
 
-2019-10-16 00:17:13,115 WARN clearConfigHistory start
+2019-10-17 00:12:06,482 WARN clearConfigHistory start
 
-2019-10-16 00:27:12,988 INFO [capacityManagement] start correct usage
+2019-10-17 00:22:06,355 INFO [capacityManagement] start correct usage
 
-2019-10-16 00:27:12,992 INFO [capacityManagement] end correct usage, cost: 0s
+2019-10-17 00:22:06,356 INFO [capacityManagement] end correct usage, cost: 0s
 
-2019-10-16 00:27:13,119 WARN clearConfigHistory start
+2019-10-17 00:22:06,500 WARN clearConfigHistory start
 
-2019-10-16 00:37:12,989 INFO [capacityManagement] start correct usage
+2019-10-17 00:32:06,351 INFO [capacityManagement] start correct usage
 
-2019-10-16 00:37:12,991 INFO [capacityManagement] end correct usage, cost: 0s
+2019-10-17 00:32:06,354 INFO [capacityManagement] end correct usage, cost: 0s
 
-2019-10-16 00:37:13,119 WARN clearConfigHistory start
+2019-10-17 00:32:06,488 WARN clearConfigHistory start
 
-2019-10-16 00:45:12,390 INFO Expired JWT token.
+2019-10-17 00:42:06,367 INFO [capacityManagement] start correct usage
 
-2019-10-16 00:45:12,390 ERROR Responding with unauthorized error. Message - Full authentication is required to access this resource
+2019-10-17 00:42:06,369 INFO [capacityManagement] end correct usage, cost: 0s
 
-2019-10-16 00:47:13,009 INFO [capacityManagement] start correct usage
+2019-10-17 00:42:06,501 WARN clearConfigHistory start
 
-2019-10-16 00:47:13,010 INFO [capacityManagement] end correct usage, cost: 0s
+2019-10-17 00:52:06,385 INFO [capacityManagement] start correct usage
 
-2019-10-16 00:47:13,141 WARN clearConfigHistory start
+2019-10-17 00:52:06,387 INFO [capacityManagement] end correct usage, cost: 0s
 
-2019-10-16 00:57:13,028 INFO [capacityManagement] start correct usage
+2019-10-17 00:52:06,518 WARN clearConfigHistory start
 
-2019-10-16 00:57:13,030 INFO [capacityManagement] end correct usage, cost: 0s
+2019-10-17 01:02:06,377 INFO [capacityManagement] start correct usage
 
-2019-10-16 00:57:13,168 WARN clearConfigHistory start
+2019-10-17 01:02:06,380 INFO [capacityManagement] end correct usage, cost: 0s
 
-2019-10-16 01:07:13,022 INFO [capacityManagement] start correct usage
+2019-10-17 01:02:06,508 WARN clearConfigHistory start
 
-2019-10-16 01:07:13,023 INFO [capacityManagement] end correct usage, cost: 0s
+2019-10-17 01:12:06,401 INFO [capacityManagement] start correct usage
 
-2019-10-16 01:07:13,154 WARN clearConfigHistory start
+2019-10-17 01:12:06,402 INFO [capacityManagement] end correct usage, cost: 0s
 
-2019-10-16 01:07:17,450 INFO Shutting down ExecutorService 'taskScheduler'
+2019-10-17 01:12:06,531 WARN clearConfigHistory start
 
-2019-10-16 01:07:17,453 INFO Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-17 01:22:06,424 INFO [capacityManagement] start correct usage
+
+2019-10-17 01:22:06,428 INFO [capacityManagement] end correct usage, cost: 0s
+
+2019-10-17 01:22:06,551 WARN clearConfigHistory start
+
+2019-10-17 01:23:58,658 INFO Shutting down ExecutorService 'taskScheduler'
+
+2019-10-17 01:23:58,662 INFO Shutting down ExecutorService 'applicationTaskExecutor'
 

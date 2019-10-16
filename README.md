@@ -39,6 +39,18 @@
 
 ## 版本：
 
+#### 2019.10.17
+
+> 版本：**1.0.4**
+>
+> 作者：**lomo fu**
+>
+> 内容：整合Sentinel与Feign 完成Sentinel fallback函数编写和限流服务降级测试
+>
+> ​			整合消息中间件RocketMQ
+
+
+
 #### 2019.10.16
 
 > 版本：**1.0.3**
@@ -116,7 +128,7 @@
 
 [Feign常见问题](http://www.imooc.com/article/289005)
 
-
+[RocketMQ](http://www.imooc.com/article/290089)
 
 ------
 
@@ -341,7 +353,7 @@ my:
   name: lomo-qa
 ```
 
-2.java:
+**2.java**:
 
 ```java
 @Data
@@ -382,7 +394,7 @@ public class Controller {
 
 @**ConfigurationProperties** (prefix = "keyName")
 
-1.application.yml
+**1.application.yml**
 
 ```
 spring:
@@ -426,7 +438,7 @@ ${random} ，它可以用来生成各种不同类型的随机值。
 
 
 
-2.java:
+**2.java:**
 
 ```java
 @Data
@@ -464,14 +476,14 @@ public class DemoApplication {
 
 **@PropertySource(value = "classpath:自定义配置.properties")**
 
-1.test.properties
+**1.test.properties**
 
 ```yml
 my.name=forezp
 my.age=12
 ```
 
-2.java:
+**2.java:**
 
 ```java
 @Data

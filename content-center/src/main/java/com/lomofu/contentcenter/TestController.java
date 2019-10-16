@@ -1,13 +1,16 @@
 package com.lomofu.contentcenter;
 
 import com.lomofu.contentcenter.dao.content.ShareMapper;
+import com.lomofu.contentcenter.dto.user.UserDTO;
 import com.lomofu.contentcenter.entity.content.Share;
 import com.lomofu.contentcenter.httpclient.TestBaiduFeignClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -22,6 +25,8 @@ public class TestController {
 
   /** springCloud 提供的接口提供查询 */
   @Resource private DiscoveryClient discoveryClient;
+
+  @Resource private RestTemplate restTemplate;
 
   @GetMapping("/test")
   public List<Share> testInsert() {
@@ -65,5 +70,12 @@ public class TestController {
   @GetMapping("/baidu")
   public String baidIndex() {
     return testBaiduFeignClient.index();
+  }
+
+  @GetMapping("/test-rest/{id}")
+  public UserDTO testRest(@PathVariable Integer id) {
+    return restTemplate
+        .getForEntity("http://user-center/users/{userId}", UserDTO.class, id)
+        .getBody();
   }
 }
