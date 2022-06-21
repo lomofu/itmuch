@@ -33,7 +33,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.17</version>
+            <version>8.0.28</version>
         </dependency>
         <!--通用mapper 更好用的mybatis-->
         <dependency>
@@ -102,7 +102,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>8.0.17</version>
+                        <version>8.0.28</version>
                     </dependency>
                     <dependency>
                         <groupId>tk.mybatis</groupId>
